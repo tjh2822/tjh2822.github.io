@@ -11,8 +11,18 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- My Custom CSS-->
+  <link href="custom.css" rel="stylesheet">
+
 </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body class="d-flex flex-column" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- navbar to be a spacer behing the fixed top navbar -->
+    <nav class="navbar navbar-expand-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">Home</a>
+      </div>
+    </nav>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div class="container">
@@ -26,38 +36,82 @@
               <a class="nav-link" href="#who_am_i">Who am I?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#what_i_do">What I do</a>
+              <a class="nav-link" href="#what_i_do">What do I do?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#my_work">My work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Get in touch</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+
     <!-- Jumbotron / title -->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container" style="padding-top:70px; padding-bottom:35px">
-        <h1>Thomas James Hall</h1>
-        <p class="lead">Thinking, reading, collecting, designing, editing, making and playing around</p>
+    <div class="jumbotron jumbotron-fluid" id="title">
+      <div class="container">
+        <h1 class="display-3">Thomas James Hall</h1>
+        <p class="lead subtitle">Thinking, reading, collecting, <span class="font-blue">designing</span>, <span class="font-red">making</span> and playing around</p>
+        <hr class="my-4">
       </div>
     </div>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" id="page-content">
+
+      <!-- Who am I -->
       <div class="row" id="who_am_i" >
         <div class="col-lg-12">
-          <h1 class="mt-5">Who am I?</h1>
+          <h1 class="display-5">Who am I?</h1>
+          <p class="lead">I'm a 4th year Computer Science student studying at the <a class="text-rit-orange" href="https://www.rit.edu/" target="_blank">Rochester Institute of Technology</a>.</p>
         </div>
       </div>
 
+      <!-- what do I do? -->
       <div class="row" id="what_i_do">
         <div class="col-lg-12">
-          <h1 class="mt-5">What do I do?</h1>
+          <h1 class="display-5">What do I do?</h1>
+          <p class="lead">Outside of my studies I spend my time working with 3D printing, my student group <a class="text-rit-orange" href="https://spex.rit.edu/" target="_blank">RIT Space
+            Exploration</a> working on the rovers team, and other personal projects like SwimAid.</p>
         </div>
       </div>
+
+      <!-- what do I do? -->
+      <div class="row" id="my_work">
+        <div class="col-lg-12">
+          <h1 class="display-5">My work</h1>
+          <p class="lead"></p>
+        </div>
+      </div>
+
+      <!-- contact -->
+      <div class="row" id="contact">
+        <div class="col-lg-12">
+          <h1 class="display-5">Get in touch</h1>
+          <p class="lead"><a href="mailto:tjh2822@g.rit.edu" target="_blank">Email</a> • <a href="https://github.com/tjh2822" target="_blank">GitHub</a> • <a href="#" target="_blank">Linkedin</a></p>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Footer  -->
+    <footer class="bg-medium-dark" id="sticky-footer">
+      <div class="container-fluid py-3  text-center">
+        <span class="text-muted">© 2019 Copyright: <a href="#">thomasjameshall.com</a></span>
+      </div>
+    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.slim.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="custom.js"></script>
   </body>
 </html>
