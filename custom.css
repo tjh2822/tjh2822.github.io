@@ -27,6 +27,12 @@ body {
     line-height: 1.2;
 }
 
+.display-6 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
 .subtitle {
     font-size: 1.7rem;
 }
@@ -49,11 +55,5 @@ body {
     right: 0;
     left: 0;
     z-index: 1030;
-}
-
-/* The progress bar (scroll indicator) */
-.progress-bar {
-    height: 8px;
-    background: #007bff;
-    width: 0%;
+    border-radius: 0px;
 }
