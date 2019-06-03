@@ -44,16 +44,3 @@ body {
 .font-red {
     color: #ce2b12
 }
-
-/* The progress container (grey background) */
-.progress-container {
-    width: 100%;
-    height: 8px;
-    background: #ccc;
-    position: fixed;
-    top: 56px;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    border-radius: 0px;
-}
