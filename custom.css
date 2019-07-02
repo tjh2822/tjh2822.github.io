@@ -1,4 +1,8 @@
-/* Sticky Footer Classes */
+@import "vendor/bootstrap/css/bootstrap.css";
+
+html {
+    scroll-behavior: smooth;
+}
 
 html,
 body {
@@ -9,7 +13,7 @@ body {
     flex: 1 0 auto;
 }
 
-.bg-medium-dark {
+.footer-light {
     background-color: #E9ECEF;
 }
 
@@ -42,5 +46,40 @@ body {
 }
 
 .font-red {
-    color: #ce2b12
+    color: #ce2b12;
+}
+
+.pagination-centered {
+    text-align: center;
+}
+
+/*
+Dark mode stuff for body
+ */
+
+body.dark {
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+body.dark code[class*=language-],
+body.dark aside input {border: 1px solid #292929; }
+body.dark, body.dark input{background-color: #222222; color:#fff}
+body.dark .jumbotron { background-color: #292929; }
+body.dark .footer-light { background-color: #292929; }
+body.dark .font-red { color: #c32772; }
+body.dark .font-blue { color: #45cbef; }
+body.dark .text-muted { color: #fff; }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
 }

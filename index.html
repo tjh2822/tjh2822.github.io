@@ -14,9 +14,16 @@
   <!-- My Custom CSS-->
   <link href="custom.css" rel="stylesheet">
 
+  <!-- Event listener for darkmode button-->
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      ((localStorage.getItem('mode') || 'dark') === 'dark') ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')
+    })
+  </script>
+
 </head>
   <body class="d-flex flex-column" data-spy="scroll" data-target=".navbar" data-offset="50">
-    <!-- navbar to be a spacer behing the fixed top navbar -->
+    <!-- Navbar to be a spacer behing the fixed top navbar -->
     <nav class="navbar navbar-expand-sm">
       <div class="container">
         <a class="navbar-brand" href="#">Home</a>
@@ -26,7 +33,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Home</a>
+        <a class="navbar-brand" href="#" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
+                  localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark'); title=Dark/light" >
+          🌓 Light|dark mode</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,8 +61,12 @@
     <!-- Jumbotron / title -->
     <div class="jumbotron jumbotron-fluid" id="title">
       <div class="container">
-        <h1 class="display-3">Thomas James Hall</h1>
-        <p class="lead subtitle">Thinking, reading, collecting, <span class="font-blue">designing</span>, <span class="font-red">making</span> and playing around</p>
+        <div class="pagination-centered">
+          <h2 class="display-4">Thomas James Hall</h2>
+          <img src="images/Draft-black.png" style="max-width: 100%" alt="self portrait">
+          <p class="lead subtitle">Thinking, reading, collecting, <span class="font-blue">designing</span>, <span class="font-red">making</span> and playing around</p>
+        </div>
+
         <hr class="my-4">
       </div>
     </div>
@@ -65,7 +78,9 @@
       <div class="row" id="who_am_i" >
         <div class="col-lg-12">
           <h1 class="display-5">Who am I?</h1>
-          <p class="lead">I'm a 4th year Computer Science student studying at the <a class="text-rit-orange" href="https://www.rit.edu/" target="_blank">Rochester Institute of Technology</a>.</p>
+          <p class="lead">I'm a 4th year Computer Science student studying at the <a class="text-rit-orange" href="https://www.rit.edu/" target="_blank">Rochester Institute of Technology</a>.
+            love to solve problems. Whether it’s finding the most elegant way to write a function or figuring out how to arrange a print, I love the challenge of finding a way and discovering
+            solutions. As long as there’s a problem to solve or a challenge to puzzle over, it’s bound to be something I love! </p>
         </div>
       </div>
 
@@ -83,11 +98,21 @@
         <div class="col-lg-12">
           <h1 class="display-5">My work</h1>
           <h1 class="display-6">Rover</h1>
-          <p class="lead"></p>
+          <img src="images/rover_iso.png" style="max-width: 100%" alt="self portrait">
+          <p class="lead">Let a team of students in the design and construction of a mock rover. This was new for me as
+            there were a lot of unknowns that need to be answered before starting this project. It employed a
+            multidisciplinary team for construction and development over two semesters.</p>
           <h1 class="display-6">High Altitude Balloon</h1>
-          <p class="lead"></p>
+          <p class="lead">A high altitude balloon, or HAB, is a very large latex balloon that depending on the size of
+            the balloon and how much helium will take a small payload to around 100,000 feet or 30,000 meters in the
+            atmosphere. The payload WUAP uses on-board image processing with a Raspberry Pi 3, Python 3 and OpenCV
+            3.3 to mask RGB images of the Earth and attempts to mask areas of high vegetation using colorspace
+            transformations.</p>
           <h1 class="display-6">Swim Aid</h1>
-          <p class="lead"></p>
+          <p class="lead">This project aims to develop a device for visually impaired swimmers which can track the 3D
+            distance traveled and alert the swimmer when they approach the edge of the pool. The device uses an Arduino
+            nano, buzzer, and well as a LSM6DSM1 IMU. THe device polls for accelerometer data and employs a 4th order
+            Runge Kutta method to approximate the slope (distance). </p>
         </div>
       </div>
 
@@ -95,16 +120,18 @@
       <div class="row" id="contact">
         <div class="col-lg-12">
           <h1 class="display-5">Get in touch</h1>
-          <p class="lead"><a href="mailto:tjh2822@g.rit.edu" target="_blank">Email</a> • <a href="https://github.com/tjh2822" target="_blank">GitHub</a> • <a href="#" target="_blank">Linkedin</a></p>
+          <p class="lead"><a class="font-blue" href="mailto:tjh2822@g.rit.edu" target="_blank">Email</a> • <a class="font-blue" href="https://github.com/tjh2822" target="_blank">GitHub</a> • <a class="font-blue" href="https://www.linkedin.com/in/thomas-james-hall/" target="_blank">Linkedin</a></p>
         </div>
       </div>
 
     </div>
 
     <!-- Footer  -->
-    <footer class="bg-medium-dark" id="sticky-footer">
-      <div class="container-fluid py-3  text-center">
-        <span class="text-muted">© 2019 Copyright: <a href="#">thomasjameshall.com</a></span>
+    <footer id="sticky-footer">
+      <div class="footer-light">
+        <div class="container-fluid py-3 text-center">
+          <span class="text-muted">© 2019 Copyright: <a class="font-blue" href="#">thomasjameshall.com</a></span>
+        </div>
       </div>
     </footer>
 
