@@ -1,4 +1,8 @@
-/* Sticky Footer Classes */
+@import "vendor/bootstrap/css/bootstrap.css";
+
+html {
+    scroll-behavior: smooth;
+}
 
 html,
 body {
@@ -9,7 +13,7 @@ body {
     flex: 1 0 auto;
 }
 
-.bg-medium-dark {
+.footer-light {
     background-color: #E9ECEF;
 }
 
@@ -42,13 +46,40 @@ body {
 }
 
 .font-red {
-    color: #ce2b12
+    color: #ce2b12;
 }
 
-.vertical-center {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 90vh; /* These two lines are counted as one :-)       */
-
-    display: flex;
-    align-items: center;
+.pagination-centered {
+    text-align: center;
 }
+
+.hero-image{
+    max-width: 100%;
+}
+
+.darkmode-button{
+    color: #c4c4c4;
+}
+
+.darkmode-button:hover{
+    color: #fff;
+}
+
+/*
+Dark mode stuff for body
+ */
+
+body.dark {
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+body.dark code[class*=language-],
+body.dark aside input {border: 1px solid #292929; }
+body.dark, body.dark input{background-color: #272727; color:#fff}
+body.dark .jumbotron { background-color: #292929; }
+body.dark .footer-light { background-color: #292929; }
+body.dark .font-red { color: #c32772; }
+body.dark .font-blue { color: #45cbef; }
+body.dark .text-muted { color: #fff; }
+body.dark .hero-image { filter: invert(100%) sepia(0%) saturate(2631%) hue-rotate(301deg) brightness(114%) contrast(100%);}
