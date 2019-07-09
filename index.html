@@ -17,10 +17,9 @@
   <!-- Event listener for darkmode button-->
   <script>
     document.addEventListener('DOMContentLoaded', (event) => {
-      ((localStorage.getItem('mode') || 'dark') === 'dark') ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')
-    })
+      ((localStorage.getItem('mode') || 'dark') === 'dark') ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark');
+    });
   </script>
-
 </head>
   <body class="d-flex flex-column" data-spy="scroll" data-target=".navbar" data-offset="50">
     <!-- Navbar to be a spacer behing the fixed top navbar -->
@@ -33,9 +32,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
-                  localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark'); title=Dark/light" >
-          🌓 Light|dark mode</a>
+        <a class="nav-link" href="#" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
+                  localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark'); title=Dark/light" >🌓 <span class="darkmode-button">Light / dark mode</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -63,10 +61,9 @@
       <div class="container">
         <div class="pagination-centered">
           <h2 class="display-4">Thomas James Hall</h2>
-          <img src="images/Draft-black.png" style="max-width: 100%" alt="self portrait">
+          <img src="images/Draft-black.png" class="hero-image" alt="portrait">
           <p class="lead subtitle">Thinking, reading, collecting, <span class="font-blue">designing</span>, <span class="font-red">making</span> and playing around</p>
         </div>
-
         <hr class="my-4">
       </div>
     </div>
@@ -84,30 +81,35 @@
         </div>
       </div>
 
+      <br>
+
       <!-- what do I do? -->
       <div class="row" id="what_i_do">
         <div class="col-lg-12">
           <h1 class="display-5">What do I do?</h1>
           <p class="lead">Outside of my studies I spend my time working with 3D printing, my student group <a class="text-rit-orange" href="https://spex.rit.edu/" target="_blank">RIT Space
-            Exploration</a> working on the rovers team, and other personal projects like SwimAid.</p>
+            Exploration</a> working on the rovers team, and other personal projects like SwimAid. </p>
         </div>
       </div>
+
+      <br>
 
       <!-- what do I do? -->
       <div class="row" id="my_work">
         <div class="col-lg-12">
           <h1 class="display-5">My work</h1>
           <h1 class="display-6">Rover</h1>
-          <img src="images/rover_iso.png" style="max-width: 100%" alt="self portrait">
           <p class="lead">Let a team of students in the design and construction of a mock rover. This was new for me as
             there were a lot of unknowns that need to be answered before starting this project. It employed a
             multidisciplinary team for construction and development over two semesters.</p>
+
           <h1 class="display-6">High Altitude Balloon</h1>
           <p class="lead">A high altitude balloon, or HAB, is a very large latex balloon that depending on the size of
             the balloon and how much helium will take a small payload to around 100,000 feet or 30,000 meters in the
-            atmosphere. The payload WUAP uses on-board image processing with a Raspberry Pi 3, Python 3 and OpenCV
+            atmosphere. The payload I helped integrate (WUAP) uses on-board image processing with a Raspberry Pi 3, Python 3 and OpenCV
             3.3 to mask RGB images of the Earth and attempts to mask areas of high vegetation using colorspace
             transformations.</p>
+
           <h1 class="display-6">Swim Aid</h1>
           <p class="lead">This project aims to develop a device for visually impaired swimmers which can track the 3D
             distance traveled and alert the swimmer when they approach the edge of the pool. The device uses an Arduino
@@ -115,6 +117,8 @@
             Runge Kutta method to approximate the slope (distance). </p>
         </div>
       </div>
+
+      <br>
 
       <!-- contact -->
       <div class="row" id="contact">
@@ -125,6 +129,8 @@
       </div>
 
     </div>
+
+    <hr>
 
     <!-- Footer  -->
     <footer id="sticky-footer">
