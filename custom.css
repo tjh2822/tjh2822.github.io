@@ -54,7 +54,7 @@ body {
 }
 
 .hero-image{
-    max-width: 85%;
+    max-width: 100%;
 }
 
 .darkmode-button{
@@ -76,7 +76,7 @@ body.dark {
 
 body.dark code[class*=language-],
 body.dark aside input {border: 1px solid #292929; }
-body.dark, body.dark input{background-color: #222222; color:#fff}
+body.dark, body.dark input{background-color: #272727; color:#fff}
 body.dark .jumbotron { background-color: #292929; }
 body.dark .footer-light { background-color: #292929; }
 body.dark .font-red { color: #c32772; }
