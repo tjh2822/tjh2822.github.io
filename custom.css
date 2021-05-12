@@ -54,20 +54,13 @@ body {
 }
 
 .hero-image{
-    max-width: 100%;
+    width: 100%;
 }
 
-.darkmode-button{
-    color: #c4c4c4;
-}
-
-.darkmode-button:hover{
-    color: #fff;
-}
 
 /*
 Dark mode stuff for body
- */
+ 
 
 body.dark {
     background-color: #1E1E1E;
@@ -82,4 +75,5 @@ body.dark .footer-light { background-color: #292929; }
 body.dark .font-red { color: #c32772; }
 body.dark .font-blue { color: #45cbef; }
 body.dark .text-muted { color: #fff; }
-body.dark .hero-image { filter: invert(100%) sepia(0%) saturate(2631%) hue-rotate(301deg) brightness(114%) contrast(100%);}
+
+*/
